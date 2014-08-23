@@ -6,5 +6,8 @@ ffi.cdef [[
   void free(void *ptr);
 ]]
 
-ffi.cdef(io.open(dir .. '/mysql.min.h'):read('*a'))
-return ffi.load('mysqlclient')
+local file = io.open(dir .. '/mysql.min.h')
+ffi.cdef(file:read('*a'))
+file:close()
+
+return assert(ffi.load('mysqlclient'), 'failed to load libmysqlclient')
