@@ -1,8 +1,8 @@
 
 all: src/mysql/mysql.min.h
 
-src/mysql/mysql.min.h:
-	echo '#include <mysql/mysql.h>' | gcc -E - | grep -v '^ *#' > $@
+src/mysql/mysql.min.h: src/mysql/mysql.h
+	gcc -E $< | grep -v '^ *#' > $@
 
 test: run-tests
 run-tests:
