@@ -1,6 +1,5 @@
 local ffi = require 'ffi'
 local lib = require 'mysql/libmysqlclient'
-local cjson = require 'cjson'
 
 local st_mysql = require 'mysql/st_mysql'
 local st_mysql_res = require 'mysql/st_mysql_res'
