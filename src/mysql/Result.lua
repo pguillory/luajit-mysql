@@ -1,5 +1,5 @@
 local ffi = require 'ffi'
-local class = require 'Class'
+local class = require 'mysql/class'
 
 --------------------------------------------------------------------------------
 -- Result

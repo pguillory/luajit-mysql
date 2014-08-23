@@ -1,5 +1,5 @@
 local ffi = require 'ffi'
-local class = require 'Class'
+local class = require 'mysql/class'
 local Result = require 'mysql/Result'
 
 local st_mysql_stmt = require 'mysql/st_mysql_stmt'
